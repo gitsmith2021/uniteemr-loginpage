@@ -1,0 +1,67 @@
+/* Base slider layout */
+.notice-slider {
+  width: 100%;
+}
+
+.notice-slider .slick-list {
+  overflow: hidden;
+}
+
+.notice-slider .slick-slide > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Animated dot indicators — native buttons for click support */
+.notice-slider .slick-dots {
+  position: absolute;
+  bottom: -24px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.notice-slider .slick-dots li {
+  margin: 0;
+  width: 8px;
+  height: 8px;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.notice-slider .slick-dots li button {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  border-radius: 9999px;
+  background-color: #d1d5db;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.6;
+}
+
+.notice-slider .slick-dots li button:before {
+  display: none;
+}
+
+.notice-slider .slick-dots li button:hover {
+  background-color: #00b8cd;
+  opacity: 0.8;
+  transform: scale(1.2);
+}
+
+/* Active dot — expands into an animated pill */
+.notice-slider .slick-dots li.slick-active {
+  width: 20px;
+}
+
+.notice-slider .slick-dots li.slick-active button {
+  background-color: #00b8cd;
+  opacity: 1;
+}
